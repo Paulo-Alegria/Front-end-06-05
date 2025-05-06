@@ -6,6 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h2>Notas Asignaturas Front-End</h2>
+    <form id="studentform">
+        <div>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+        </div>
+        <div>
+            <label for="lastname">Apellidos:</label>
+            <input type="text" id="lastname" required>
+        </div>
+        <div>
+            <label for="grade">Nota:</label>
+            <input type="number" id="grade" step="0.01" min="1" max="7" required>
+        </div>
+        <div>
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+    <table id="studenttable" border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Nombre:</th>
+                <th>Apellidos:</th>
+                <th>Nota:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas de largo -->
+    </table>
+    <script src="script.js"></script>
 </body>
 </html>
