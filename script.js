@@ -5,12 +5,12 @@ document.getElementById("studentform").addEventListener("submit",function(e){
  const name = document.getElementById("name").value.trim();
  const lastname = document.getElementById("lastname").value.trim();
  const grade = parseFloat(document.getElementById("grade").value);
-
- if(grade<1 || grade>7 ||!name || !lastname || isNaN(grade)){
+ const date = document.getElementById("date").value;
+ if(grade<1 || grade>7 ||!name || !lastname || isNaN(grade) || !date){
     alert("Error al ingresar los datos")
     return
  }
- const student = {name,lastname,grade} 
+ const student = {name,lastname,grade,date} 
  students.push(student);
  addStudentsToTable(student);
   
@@ -24,6 +24,7 @@ function addStudentsToTable(student){
     <td>${student.name}</td>
     <td>${student.lastname}</td>
     <td>${student.grade}</td>
+    <td>${student.date}</td>
     `;
  tablebody.appendChild(row);
 }
