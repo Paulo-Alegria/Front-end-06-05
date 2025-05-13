@@ -1,5 +1,4 @@
 const students = []
-// funciona como lita
 document.getElementById("studentform").addEventListener("submit",function(e){
  e.preventDefault();
  const name = document.getElementById("name").value.trim();
@@ -13,7 +12,7 @@ document.getElementById("studentform").addEventListener("submit",function(e){
  const student = {name,lastname,grade,date} 
  students.push(student);
  addStudentsToTable(student);
-  
+ calculateAverage();
   this.reset()
 
 });
@@ -27,4 +26,12 @@ function addStudentsToTable(student){
     <td>${student.date}</td>
     `;
  tablebody.appendChild(row);
+}
+
+const promedioDiv= document.getElementById("average");
+
+function calculateAverage(){
+   total=students.reduce((acumulador,student)=> acumulador+student.grade,0);
+   const average= total/students.length;
+   promedioDiv.textContent=`Promedio del curso: ${average.toFixed(2)}`;
 }
