@@ -1,0 +1,147 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+#average {
+  text-align: center;
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 18px 0 24px 0;
+}
+
+form {
+  max-width: 420px;
+  margin: 0 auto 32px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 28px 24px 18px 24px;
+  border-top: 4px solid #1976d2;
+}
+
+form div {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 9px 12px;
+  border: 2px solid #1976d2;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+  border-color: #1565c0;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 11px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #1565c0;
+}
+
+#studenttable {
+  width: 98%;
+  max-width: 900px;
+  margin: 0 auto 32px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+#studenttable th, #studenttable td {
+  padding: 12px 10px;
+  text-align: left;
+}
+
+#studenttable th {
+  background: #1976d2;
+  color: #fff;
+  font-weight: 600;
+}
+
+#studenttable tr:nth-child(even) {
+  background: #f1f7ff;
+}
+
+#studenttable tr:nth-child(odd) {
+  background: #fff;
+}
+
+@media (max-width: 600px) {
+  form, #studenttable {
+    max-width: 98vw;
+    padding: 10px;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  #average {
+    font-size: 1rem;
+  }
+  #studenttable th, #studenttable td {
+    padding: 7px 4px;
+    font-size: 0.95rem;
+  }
+}
+
+#error-message {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-left: 6px solid #ff9800;
+  color: #222;
+  font-size: 1.08rem;
+  font-weight: 500;
+  margin: 18px auto 10px auto;
+  max-width: 420px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  gap: 10px;
+}
+#error-message .icon {
+  color: #ff9800;
+  font-size: 1.3em;
+  margin-right: 6px;
+} 
