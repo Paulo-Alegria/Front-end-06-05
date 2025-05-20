@@ -53,8 +53,41 @@ function addStudentsToTable(student){
     <td>${student.lastname}</td>
     <td>${student.grade}</td>
     <td>${student.date}</td>
+    <td>
+        <button class="delete-btn">Eliminar</button>
+        <button class="edit-btn">Editar</button>
+    </td>
     `;
+    row.querySelector(".delete-btn").addEventListener("click",function(){
+      borrarestudiante(student,row);
+   });
+   row.querySelector(".edit-btn").addEventListener("click",function(){
+    editStudent(student,row);
+   });
  tablebody.appendChild(row);
+}
+
+function borrarestudiante(student,row){
+    const index= students.indexOf(student);
+    if(index > -1){
+        students.splice(index,1);
+        calculateAverage();
+        row.remove();
+    }
+}
+
+function editStudent(student, row) {
+    document.getElementById("name").value = student.name;
+    document.getElementById("lastname").value = student.lastname;
+    document.getElementById("grade").value = student.grade;
+    document.getElementById("date").value = student.date;
+
+    const index = students.indexOf(student);
+    if (index > -1) {
+        students.splice(index, 1);
+        row.remove();
+        calculateAverage();
+    }
 }
 
 const promedioDiv= document.getElementById("average");
